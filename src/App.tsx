@@ -65,11 +65,18 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-6xl font-bold text-green-800 mb-8">
-                Cultivo Biointensivo
-              </h1>
+              <div className="flex items-center mb-8">
+                <div className="w-[40%]">
+                  <img src="/images/cultivo-gallego-logo.png" alt="Cultivo Gallego Logo" className="w-full h-auto" />
+                </div>
+                <div className="w-[60%]">
+                  <h1 className="text-4xl md:text-6xl font-bold text-green-800">
+                    Cultivo Gallego
+                  </h1>
+                </div>
+              </div>
               <p className="text-xl text-gray-600 mb-6">
-                Cultivamos de manera sostenible, respetando la tierra y ofreciendo productos frescos y saludables.
+                Realizamos cultivo biointensivo de manera sostenible, respetando la tierra y ofreciendo productos frescos y saludables.
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 Nuestro compromiso es proporcionar alimentos de la más alta calidad mientras cuidamos del medio ambiente.
