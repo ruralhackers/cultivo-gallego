@@ -66,7 +66,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2">
               <h1 className="text-4xl md:text-6xl font-bold text-green-800 mb-8">
-                Cultivo Gallego Biointensivo
+                Cultivo Biointensivo
               </h1>
               <p className="text-xl text-gray-600 mb-6">
                 Cultivamos de manera sostenible, respetando la tierra y ofreciendo productos frescos y saludables.
