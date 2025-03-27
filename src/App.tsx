@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Leaf, Sprout, Sun, Droplets, Heart, Send, Factory, TreePine, Fuel, Bird, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Leaf, Sprout, Sun, Droplets, Heart, Send, Factory, TreePine, Fuel, Bird, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -344,6 +344,29 @@ function App() {
                         <p className="text-gray-600">Sábados: 9:00 - 14:00</p>
                       </div>
                     </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-green-800 mb-4">Redes sociales</h3>
+                      <div className="space-y-3">
+                        <a
+                          href="https://facebook.com/cultivogallego"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        >
+                          <Facebook className="h-5 w-5 mr-2" />
+                          <span>@cultivogallego</span>
+                        </a>
+                        <a
+                          href="https://instagram.com/cultivo_gallego"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        >
+                          <Instagram className="h-5 w-5 mr-2" />
+                          <span>@cultivo_gallego</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -413,16 +436,30 @@ function App() {
       <footer className="bg-green-800 text-white py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <img src="/images/cultivo-gallego-logo.png" alt="Cultivo Gallego Logo" className="h-8 w-auto" />
-              <span className="ml-2 text-xl font-bold">Cultivo Gallego</span>
+            <div className="text-green-100 text-sm mb-4 md:mb-0 md:w-1/3">
+              <p>Hecho con 💚 desde el rural gallego by <a href="https://ruralhackers.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-300 transition-colors duration-200">Rural Hackers</a> • <a href="https://github.com/ruralhackers/cultivo-gallego" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-300 transition-colors duration-200">GitHub</a></p>
             </div>
-            <div className="text-center md:text-right">
+            <div className="flex space-x-4 mb-4 md:mb-0 md:w-1/3 justify-center">
+              <a
+                href="https://facebook.com/cultivogallego"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-green-300 transition-colors duration-200"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/cultivo_gallego"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-green-300 transition-colors duration-200"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
+            <div className="text-center md:text-right md:w-1/3">
               <p>© {new Date().getFullYear()} Cultivo Gallego. Todos los derechos reservados.</p>
             </div>
-          </div>
-          <div className="text-center mt-4 text-green-100 text-sm">
-            <p>Hecho con 💚 desde el rural gallego • <a href="https://github.com/cultivo-gallego" className="underline hover:text-green-300 transition-colors duration-200">GitHub</a></p>
           </div>
         </div>
       </footer>
