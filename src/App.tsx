@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { Leaf, Sprout, Sun, Droplets, Heart, Send, Factory, TreePine, Fuel, Bird, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import CookieBanner from './components/CookieBanner';
+import CookiePolicy from './pages/CookiePolicy';
 
-function App() {
+const MainContent: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [state, handleSubmit] = useForm("xjkywdja");
 
@@ -15,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* Navigation */}
       <nav className="fixed w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-6 py-4">
@@ -463,7 +466,23 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
+
+      {/* Cookie Banner */}
+      <CookieBanner />
+    </>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Routes>
+          <Route path="/" element={<MainContent />} />
+          <Route path="/politica-cookies" element={<CookiePolicy />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
