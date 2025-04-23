@@ -172,7 +172,7 @@ const MainContent: React.FC = () => {
                   <Heart className="h-8 w-8 text-green-600 mr-3" />
                   <h3 className="text-xl font-semibold">Calidad Garantizada</h3>
                 </div>
-                <p className="text-gray-600">Productos frescos y nutritivos directos del campo a tu mesa, con el sabor y la calidad que solo la agricultura biointensiva puede ofrecer.</p>
+                <p className="text-gray-600">Productos frescos y nutritivos directos del campo a tu mesa, con el sabor y la calidad que solo la agricultura biointensiva puede ofrecer. Nuestros cultivos se recolectan el mismo día de la entrega, garantizando una frescura óptima con un máximo de 24 horas entre la recolección y la entrega.</p>
               </div>
             </div>
           </div>
@@ -302,73 +302,75 @@ const MainContent: React.FC = () => {
               <div className="space-y-8">
                 <div>
                   <h3 className="text-xl font-semibold text-green-800 mb-4">Información de Contacto</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-green-600 mt-1" />
+                  <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200 mb-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0">
+                          <MapPin className="h-6 w-6 text-green-600 mt-1" />
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-medium text-gray-900">Dirección</p>
+                          <p className="text-gray-600">Lugar Romai</p>
+                          <p className="text-gray-600">Portas</p>
+                          <p className="text-gray-600">Pontevedra, Galicia</p>
+                        </div>
                       </div>
-                      <div className="ml-4">
-                        <p className="font-medium text-gray-900">Dirección</p>
-                        <p className="text-gray-600">Lugar Romai</p>
-                        <p className="text-gray-600">Portas</p>
-                        <p className="text-gray-600">Pontevedra, Galicia</p>
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0">
+                          <Phone className="h-6 w-6 text-green-600 mt-1" />
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-medium text-gray-900">Teléfono</p>
+                          <p className="text-gray-600">+34 620 06 76 10</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <Phone className="h-6 w-6 text-green-600 mt-1" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="font-medium text-gray-900">Teléfono</p>
-                        <p className="text-gray-600">+34 620 06 76 10</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <Mail className="h-6 w-6 text-green-600 mt-1" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="font-medium text-gray-900">Email</p>
-                        <a
-                          href="mailto:cultivogallego@gmail.com"
-                          className="text-green-600 hover:text-green-700 transition-colors duration-200"
-                        >
-                          cultivogallego@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0">
-                        <Clock className="h-6 w-6 text-green-600 mt-1" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="font-medium text-gray-900">Horario</p>
-                        <p className="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
-                        <p className="text-gray-600">Sábados: 9:00 - 14:00</p>
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0">
+                          <Mail className="h-6 w-6 text-green-600 mt-1" />
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-medium text-gray-900">Email</p>
+                          <a
+                            href="mailto:cultivogallego@gmail.com"
+                            className="text-green-600 hover:text-green-700 transition-colors duration-200"
+                          >
+                            cultivogallego@gmail.com
+                          </a>
+                        </div>
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-green-800 mb-4">Redes sociales</h3>
-                      <div className="space-y-3">
-                        <a
-                          href="https://facebook.com/cultivogallego"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
-                        >
-                          <Facebook className="h-5 w-5 mr-2" />
-                          <span>@cultivogallego</span>
-                        </a>
-                        <a
-                          href="https://instagram.com/cultivo_gallego"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
-                        >
-                          <Instagram className="h-5 w-5 mr-2" />
-                          <span>@cultivo_gallego</span>
-                        </a>
-                      </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <Clock className="h-6 w-6 text-green-600 mt-1" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="font-medium text-gray-900">Horario</p>
+                      <p className="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                      <p className="text-gray-600">Sábados: 9:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-green-800 mb-4">Redes sociales</h3>
+                    <div className="space-y-3">
+                      <a
+                        href="https://facebook.com/cultivogallego"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                      >
+                        <Facebook className="h-5 w-5 mr-2" />
+                        <span>@cultivogallego</span>
+                      </a>
+                      <a
+                        href="https://instagram.com/cultivo_gallego"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                      >
+                        <Instagram className="h-5 w-5 mr-2" />
+                        <span>@cultivo_gallego</span>
+                      </a>
                     </div>
                   </div>
                 </div>
