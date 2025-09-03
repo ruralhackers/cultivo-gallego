@@ -43,6 +43,8 @@ const MainContent: React.FC = () => {
               <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
               <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
+              <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+              <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
               <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
             </div>
@@ -55,6 +57,8 @@ const MainContent: React.FC = () => {
                 <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
                 <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
                 <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
+                <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+                <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
                 <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
                 <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
               </div>
@@ -231,6 +235,94 @@ const MainContent: React.FC = () => {
         </div>
       </section>
 
+      {/* Alliances Section */}
+      <section id="alliances" className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Alianzas</h2>
+          <p className="text-xl text-center text-gray-600 mb-12">
+            Colaboramos con organizaciones líderes en agricultura sostenible y alimentación responsable
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                <img
+                  src="/images/milpa.jpeg"
+                  alt="A Milpa do Salnés"
+                  className="w-40 h-40 mx-auto mb-6 object-contain"
+                />
+                <h3 className="text-xl font-semibold text-green-800 mb-3">A Milpa do Salnés</h3>
+                <p className="text-gray-600 mb-4">
+                  Cooperativa gallega especializada en cultivo biointensivo de maíz y producción 
+                  de harina nixtamalizada siguiendo técnicas tradicionales mayas y aztecas.
+                </p>
+                <a
+                  href="https://www.amilpadosalnes.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                >
+                  Visitar web →
+                </a>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                <img
+                  src="/images/slow-food.jpeg"
+                  alt="Slow Food Compostela"
+                  className="w-40 h-40 mx-auto mb-6 object-contain"
+                />
+                <h3 className="text-xl font-semibold text-green-800 mb-3">Slow Food Compostela</h3>
+                <p className="text-gray-600 mb-4">
+                  Convivium local del movimiento internacional Slow Food que promueve la 
+                  alimentación buena, limpia y justa, defendiendo la biodiversidad y la producción local.
+                </p>
+                <a
+                  href="https://www.slowfoodcompostela.es/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                >
+                  Visitar web →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Training Section */}
+      <section id="training" className="py-16 bg-green-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Formación</h2>
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-semibold mb-6 text-green-800">Compartimos Nuestro Conocimiento</h3>
+            <p className="text-xl text-gray-700 mb-8">
+              Todo nuestro conocimiento y experiencia en agricultura biointensiva está disponible 
+              a través de programas de formación personalizados.
+            </p>
+            <p className="text-lg text-gray-600 mb-8">
+              Ofrecemos cursos, talleres y asesoramiento para agricultores, estudiantes y 
+              cualquier persona interesada en aprender métodos de cultivo sostenibles y respetuosos 
+              con el medio ambiente.
+            </p>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h4 className="text-xl font-semibold text-green-800 mb-4">¿Te interesa nuestra formación?</h4>
+              <p className="text-gray-700 mb-6">
+                Ponte en contacto con nosotros para conocer nuestros programas de formación, 
+                horarios disponibles y precios.
+              </p>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 text-lg"
+              >
+                Contactar para Formación
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Environmental Impact Section */}
       <section id="impact" className="py-16 bg-white">
         <div className="container mx-auto px-6">
@@ -241,50 +333,74 @@ const MainContent: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-green-50 p-8 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <Factory className="h-12 w-12 text-green-600 mr-4" />
-                <h3 className="text-2xl font-semibold text-green-800">Contaminación</h3>
+                <Sprout className="h-12 w-12 text-green-600 mr-4" />
+                <h3 className="text-2xl font-semibold text-green-800">1. Regeneración del suelo</h3>
               </div>
-              <p className="text-gray-700">
-                La contaminación es uno de los principales problemas medioambientales a los que nos enfrentamos.
-                Los proyectos verdes son el futuro para paliar este problema, y la agricultura biointensiva
-                contribuye significativamente a la reducción de la contaminación del suelo y agua.
-              </p>
+              <div className="space-y-3">
+                <p className="text-gray-700">
+                  Se mejora la fertilidad del suelo año tras año, en lugar de degradarlo.
+                </p>
+                <p className="text-gray-700">
+                  Se fomenta la vida microbiana y la biodiversidad del suelo, gracias al uso de compost y el no uso de agroquímicos.
+                </p>
+                <p className="text-gray-700">
+                  Se evita la erosión del suelo mediante cultivos densos que lo protegen del sol y la lluvia.
+                </p>
+              </div>
             </div>
 
             <div className="bg-green-50 p-8 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <TreePine className="h-12 w-12 text-green-600 mr-4" />
-                <h3 className="text-2xl font-semibold text-green-800">Deforestación</h3>
+                <Droplets className="h-12 w-12 text-green-600 mr-4" />
+                <h3 className="text-2xl font-semibold text-green-800">💧 2. Ahorro significativo de agua</h3>
               </div>
-              <p className="text-gray-700">
-                La mala práctica forestal nos está llevando a una acelerada desertificación con todo lo que
-                ello conlleva. La pérdida de biodiversidad es una consecuencia directa que afecta a todo el
-                ecosistema.
-              </p>
-            </div>
-
-            <div className="bg-green-50 p-8 rounded-lg shadow-lg">
-              <div className="flex items-center mb-4">
-                <Fuel className="h-12 w-12 text-green-600 mr-4" />
-                <h3 className="text-2xl font-semibold text-green-800">Combustibles Fósiles</h3>
+              <div className="space-y-3">
+                <p className="text-gray-700">
+                  El cultivo biointensivo puede reducir el uso de agua hasta en un 80-90% respecto a métodos convencionales.
+                </p>
+                <p className="text-gray-700">
+                  Esto se logra mediante la alta densidad de siembra, que sombrea el suelo y reduce la evaporación.
+                </p>
+                <p className="text-gray-700">
+                  Se utilizan técnicas de riego eficiente como riego por goteo o manual.
+                </p>
               </div>
-              <p className="text-gray-700">
-                Hay que trabajar en métodos de obtención de energía menos agresivos con el medio ambiente.
-                La agricultura biointensiva reduce significativamente la dependencia de maquinaria pesada y
-                combustibles fósiles.
-              </p>
             </div>
 
             <div className="bg-green-50 p-8 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <Bird className="h-12 w-12 text-green-600 mr-4" />
-                <h3 className="text-2xl font-semibold text-green-800">Extinción de Especies</h3>
+                <h3 className="text-2xl font-semibold text-green-800">🐝 3. Protección de la biodiversidad</h3>
               </div>
-              <p className="text-gray-700">
-                Todos los problemas citados anteriormente ocasionan una pérdida de biodiversidad, lo que hace
-                que la cadena de la vida falle y los ciclos no se completen provocando por ejemplo problemas
-                de salud.
-              </p>
+              <div className="space-y-3">
+                <p className="text-gray-700">
+                  No se usan pesticidas ni fertilizantes sintéticos, lo que protege a polinizadores (abejas, mariposas) y otros insectos beneficiosos.
+                </p>
+                <p className="text-gray-700">
+                  Se fomenta un ecosistema agrícola diverso y equilibrado.
+                </p>
+                <p className="text-gray-700">
+                  Las técnicas biointensivas pueden convivir con agroecosistemas locales sin desplazar especies nativas.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-green-50 p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <TreePine className="h-12 w-12 text-green-600 mr-4" />
+                <h3 className="text-2xl font-semibold text-green-800">🌍 4. Reducción de huella de carbono</h3>
+              </div>
+              <div className="space-y-3">
+                <p className="text-gray-700">
+                  El método biointensivo es principalmente manual, reduciendo el uso de maquinaria pesada y, por tanto, de combustibles fósiles.
+                </p>
+                <p className="text-gray-700">
+                  El compostaje y la producción local de alimentos secuestran carbono en el suelo, ayudando a mitigar el cambio climático.
+                </p>
+                <p className="text-gray-700">
+                  Promueve el cultivo local, disminuyendo la necesidad de transporte y sus emisiones asociadas.
+                </p>
+              </div>
             </div>
           </div>
         </div>
