@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Leaf, Sprout, Sun, Droplets, Heart, Send, Factory, TreePine, Fuel, Bird, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Sprout, Sun, Droplets, Heart, Send, TreePine, Bird, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CookieBanner from './components/CookieBanner';
 import CookiePolicy from './pages/CookiePolicy';
 
 const MainContent: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [state, handleSubmit] = useForm("xjkywdja");
 
   const scrollToSection = (id: string) => {
@@ -14,7 +13,6 @@ const MainContent: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -22,48 +20,12 @@ const MainContent: React.FC = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <div className="flex items-center">
               <img src="/images/cultivo-gallego-logo.png" alt="Cultivo Gallego Logo" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-green-800">Cultivo Gallego</span>
             </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
-            </button>
-
-            {/* Desktop menu */}
-            <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
-              <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
-              <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
-              <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
-              <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
-            </div>
           </div>
-
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4">
-              <div className="flex flex-col space-y-4">
-                <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
-                <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
-                <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
-                <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
-                <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
-                <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
-                <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
 
@@ -177,6 +139,65 @@ const MainContent: React.FC = () => {
                   <h3 className="text-xl font-semibold">Calidad Garantizada</h3>
                 </div>
                 <p className="text-gray-600">Productos frescos y nutritivos directos del campo a tu mesa, con el sabor y la calidad que solo la agricultura biointensiva puede ofrecer. Nuestros cultivos se recolectan el mismo día de la entrega, garantizando una frescura óptima con un máximo de 24 horas entre la recolección y la entrega.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Storytelling Section */}
+      <section id="story" className="py-16 bg-gradient-to-b from-white to-green-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Nuestra Historia</h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="bg-white p-8 rounded-lg shadow-lg">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                      <span className="text-2xl font-bold text-green-600">A</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold text-green-800">Aitor</h3>
+                      <p className="text-gray-600">Fundador de Cultivo Gallego</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4 text-gray-700">
+                    <p>
+                      Soy Aitor, formado en música, y siempre tuve una profunda conexión con la naturaleza y una preocupación creciente por mi entorno y el impacto que tenemos sobre él.
+                    </p>
+                    <p>
+                      Este proyecto comenzó con un pequeño huerto y la venta de limones, lo que me llevó a fundar un negocio de jardinería, que gestioné durante cinco años. Con esa experiencia y mucha formación, creé Cultivo Gallego, un proyecto agrícola basado en el método biointensivo, enfocado en la sostenibilidad, el respeto por la tierra y la autosuficiencia.
+                    </p>
+                    <p>
+                      Tengo un gran compromiso por el rural y lo local.
+                    </p>
+                    <p className="font-medium text-green-800">
+                      Hoy, Cultivo Gallego es más que una finca: representa un compromiso con un futuro más verde y demuestra que es posible vivir en armonía con el medio ambiente.
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-gray-600 mb-4">
+                        Si quieres saber más sobre este método de cultivo y sus ventajas y oportunidades:
+                      </p>
+                      <button
+                        onClick={() => scrollToSection('training')}
+                        className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300 font-medium"
+                      >
+                        Comencemos juntos esta aventura
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <img
+                    src="/images/foto-aitor.jpeg"
+                    alt="Aitor, fundador de Cultivo Gallego"
+                    className="w-full h-[500px] object-cover rounded-lg shadow-2xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                </div>
               </div>
             </div>
           </div>
