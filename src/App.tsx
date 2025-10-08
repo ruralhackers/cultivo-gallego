@@ -7,12 +7,14 @@ import CookiePolicy from './pages/CookiePolicy';
 
 const MainContent: React.FC = () => {
   const [state, handleSubmit] = useForm("xjkywdja");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false); // Close mobile menu when navigating
   };
 
   return (
@@ -20,12 +22,50 @@ const MainContent: React.FC = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img src="/images/cultivo-gallego-logo.png" alt="Cultivo Gallego Logo" className="h-8 w-auto" />
               <span className="ml-2 text-xl font-bold text-green-800">Cultivo Gallego</span>
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex space-x-8">
+              <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
+              <button onClick={() => scrollToSection('story')} className="text-gray-600 hover:text-green-600">Nuestra Historia</button>
+              <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
+              <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+              <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
+              <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
+            </div>
           </div>
+
+          {/* Mobile menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4">
+              <div className="flex flex-col space-y-4">
+                <button onClick={() => scrollToSection('inicio')} className="text-gray-600 hover:text-green-600">Inicio</button>
+                <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
+                <button onClick={() => scrollToSection('story')} className="text-gray-600 hover:text-green-600">Nuestra Historia</button>
+                <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
+                <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+                <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
+                <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
+                <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
