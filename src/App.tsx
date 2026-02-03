@@ -44,7 +44,7 @@ const MainContent: React.FC = () => {
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
               <button onClick={() => scrollToSection('story')} className="text-gray-600 hover:text-green-600">Nuestra Historia</button>
               <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
-              <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+              <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Academia Rural</button>
               <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
               <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
@@ -59,7 +59,7 @@ const MainContent: React.FC = () => {
                 <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-green-600">¿Qué ofrecemos?</button>
                 <button onClick={() => scrollToSection('story')} className="text-gray-600 hover:text-green-600">Nuestra Historia</button>
                 <button onClick={() => scrollToSection('method')} className="text-gray-600 hover:text-green-600">Método Biointensivo</button>
-                <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Formación</button>
+                <button onClick={() => scrollToSection('training')} className="text-gray-600 hover:text-green-600">Academia Rural</button>
                 <button onClick={() => scrollToSection('alliances')} className="text-gray-600 hover:text-green-600">Alianzas</button>
                 <button onClick={() => scrollToSection('impact')} className="text-gray-600 hover:text-green-600">Impacto</button>
                 <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-green-600">Contacto</button>
@@ -355,7 +355,7 @@ const MainContent: React.FC = () => {
       {/* Training Section */}
       <section id="training" className="py-16 bg-green-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Formación</h2>
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Academia Rural</h2>
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-semibold mb-6 text-green-800">Compartimos Nuestro Conocimiento</h3>
             <p className="text-xl text-gray-700 mb-8">
@@ -368,7 +368,7 @@ const MainContent: React.FC = () => {
               con el medio ambiente.
             </p>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h4 className="text-xl font-semibold text-green-800 mb-4">¿Te interesa nuestra formación?</h4>
+              <h4 className="text-xl font-semibold text-green-800 mb-4">¿Te interesa nuestra academia?</h4>
               <p className="text-gray-700 mb-6">
                 Ponte en contacto con nosotros para conocer nuestros programas de formación, 
                 horarios disponibles y precios.
@@ -377,7 +377,7 @@ const MainContent: React.FC = () => {
                 onClick={() => scrollToSection('contact')}
                 className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 text-lg"
               >
-                Contactar para Formación
+                Contactar para Academia Rural
               </button>
             </div>
           </div>
